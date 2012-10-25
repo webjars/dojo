@@ -8,18 +8,23 @@
         <version>7</version>
     </parent>
 
+    <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>dojo</artifactId>
-    <packaging>jar</packaging>
+    <version>1.8.1-SNAPSHOT</version>
     <name>dojo</name>
-    <version>1.8.1</version>
     <description>WebJar for Dojo</description>
     <url>http://webjars.org</url>
 
     <licenses>
         <license>
             <name>The "New" BSD License</name>
-            <url>http://dojotoolkit.org/license</url>
+            <url>http://bugs.dojotoolkit.org/browser/dojo/trunk/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>The Academic Free License, v. 2.1</name>
+            <url>http://bugs.dojotoolkit.org/browser/dojo/trunk/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -43,7 +48,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dojo.version>1.8.1</dojo.version>
         <dojo.url>http://download.dojotoolkit.org/release-${dojo.version}</dojo.url>
-        <destDir>${project.build.directory}/classes/META-INF/resources/webjars/dojo/${dojo.version}</destDir>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/dojo/${dojo.version}</destDir>
     </properties>
 
     <build>
