@@ -63,7 +63,7 @@
                         <goals><goal>download-single</goal></goals>
                         <configuration>
                             <url>${dojo.url}</url>
-                            <fromFile>dojo-release-${dojo.version}.zip</fromFile>
+                            <fromFile>dojo-release-${dojo.version}-src.zip</fromFile>
                             <toFile>${project.build.directory}/dojo.zip</toFile>
                         </configuration>
                     </execution>
@@ -82,7 +82,7 @@
                                 <unzip src="${project.build.directory}/dojo.zip" dest="${project.build.directory}/dojo" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}" overwrite="true" verbose="true">
-                                    <fileset dir="${project.build.directory}/dojo/dojo-release-${dojo.version}" />
+                                    <fileset dir="${project.build.directory}/dojo/dojo-release-${dojo.version}-src" />
                                 </move>
                             </target>
                         </configuration>
