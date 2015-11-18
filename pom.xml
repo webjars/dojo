@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>dojo</artifactId>
-    <version>1.10.2-SNAPSHOT</version>
+    <version>1.10.4-1-SNAPSHOT</version>
     <name>dojo</name>
     <description>WebJar for Dojo</description>
     <url>http://webjars.org</url>
@@ -46,9 +46,16 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dojo.version>1.10.1</dojo.version>
+        <dojo.version>1.10.4</dojo.version>
         <dojo.url>http://download.dojotoolkit.org/release-${dojo.version}</dojo.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/dojo/${dojo.version}</destDir>
+        <requirejs>
+            {
+                "paths": {
+                    "dojo": "dojo/dojo"
+                }
+            }
+        </requirejs>
     </properties>
 
     <build>
